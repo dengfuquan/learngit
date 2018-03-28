@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$.ajax({
+		url:"/getJson6",
+		type:"get",
+		success:function(response){
+			console.log(response.orderId);
+			console.log(response.ajiaUser.username);
+			var orderItemList=response.ajiaOrderItemList;
+			for (var i=0;i<orderItemList.length;i++){
+				var orderItemObject=orderItemList[i];
+				console.log(orderItemObject.title);
+			}
+		}
+	});
+	
+})
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$.ajax({
+		url:"/getJson5",
+		type:"get",
+		success:function(response){
+			console.log(response.orderId);
+			console.log(response.ajiaUser.username);
+		}
+	});
+	
+})
+</script>
+</head>
+<body>
+
+</body>
+</html>
